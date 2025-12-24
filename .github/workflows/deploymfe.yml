@@ -29,4 +29,4 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Sync build to S3
-        run: aws s3 sync ./dist/my-products-mfe s3://${{ secrets.AWS_S3_BUCKET }}
+        run: aws s3 sync ./dist/my-products-mfe s3://${{ secrets.AWS_S3_BUCKET }}/app/my-products-mfe/ --delete
